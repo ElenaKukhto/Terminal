@@ -1,0 +1,110 @@
+1 Создать 3 папки и назвать их
+dir_1 dir_2 dir_3
+
+answer: mkdir dir_1 dir_2 dir_3
+
+2 Внутри каждой папки создать по 2 папки и назвать их
+pap_1 pap_2 
+
+answer: cd dir_1
+        mkdir pap_1 pap_2
+        cd ../
+        cd dir_2
+        mkdir pap_1 pap_2
+        cd ../
+        cd dir_3
+        mkdir pap_1 pap_2
+
+3 В одной из веток например dir_1/ в папке pap_1/
+создать 4 текстовых документа под названиями 
+text_1.txt text_2.txt note_1.txt note_2.txt
+
+answer: cd dir_1/pap_1
+        touch text_1.txt text_2.txt note_1.txt note_2.txt
+
+4 Файлы text_1.txt text_2.txt заполнить следующими строками 
+line_1
+line_2
+line_3
+line_10
+line_11
+line_110
+
+answer: cat >> text_1.txt
+line_1
+line_2
+line_3
+line_10
+line_11
+line_110
+Ctrl+D
+        cat >> text_2.txt
+line_1
+line_2
+line_3
+line_10
+line_11
+line_110
+Ctrl+D
+
+5 Файлы note_1.txt note_2.txt заполнить следующими строками 
+row_1
+row_2
+row_3
+row_10
+row_11
+row_110
+
+answer: cat >> note_1.txt
+row_1
+row_2
+row_3
+row_10
+row_11
+row_110
+Ctrl+D
+        cat >> note_2.txt
+row_1
+row_2
+row_3
+row_10
+row_11
+row_110
+Ctrl+D
+
+6 Скопировать файлы в dir_1/pap_2/ поменяв при копировании названия файлов на  
+text_1_2.txt text_2_2.txt note_1_2.txt note_2_2.txt
+
+answer:
+        cp text_1.txt ../pap_2/text_1_2.txt
+        cp text_2.txt ../pap_2/text_2_2.txt
+        cp note_1.txt ../pap_2/note_1_2.txt
+        cp note_2.txt ../pap_2/note_2_2.txt
+
+7 выйти в корневой каталог
+
+answer: cd ../
+
+8 Используя find найти путь к файлу имя которого note_2_2.txt
+
+answer: find . -name note_2_2.txt
+
+9 Используя find найти путь к файлу имя которого text_1.txt
+
+answer: find . -name text_1.txt
+
+10 Используя find найти путь к файлам имя которых содержит букву t
+
+answer: find . -name "*t*"
+
+11 Используя find найти путь к файлам имя которых содержит txt
+
+answer: find . -name "*txt*"
+
+12 Используя find найти все папки pap_2
+
+answer: find . -type d -name "pap_2"
+
+13 Используя find найти путь ко всем папкам имя которых содержит _1
+
+answer: find . -type d -name "*_1*"
